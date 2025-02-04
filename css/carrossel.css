@@ -91,8 +91,7 @@
 }
 
 .project-image__bg2 {
-    background-image: url("/img/bg.png");
-    background-repeat: no-repeat;
+    background-image: "/img/bg.png";
     background-size: auto;
     background-position: center;
 }
