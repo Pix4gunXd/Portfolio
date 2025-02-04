@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/background.css">
+    <link rel="stylesheet" href="./css/carrossel.css">
+    <link rel="stylesheet" href="./css/style.css">
+    
+    
+    <title>Caio Pompei Campos</title>
+
+    <script>
+        let slideIndex = 1;
+
+    function mudarSlide(n) {
+    mostrarSlide(slideIndex += n);
+    }
+
+    function slideAtual(n) {
+    mostrarSlide(slideIndex = n);
+    }
+
+    function mostrarSlide(n) {
+        const slides = document.getElementsByClassName("mySlide");
+        const dots = document.getElementsByClassName("dot");
+    
+        if (n > slides.length) slideIndex = 1;
+        if (n < 1) slideIndex = slides.length;
+    
+        // Esconde todos os slides
+        Array.from(slides).forEach(slide => slide.style.display = "none");
+    
+        // Remove a classe "active" dos dots
+        Array.from(dots).forEach(dot => dot.classList.remove("active"));
+    
+        // Mostra o slide atual e atualiza o dot
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].classList.add("active");
+    }   
+
+    // Cria dots dinamicamente e inicializa o primeiro slide
+    document.addEventListener('DOMContentLoaded', () => {
+        const slides = document.querySelectorAll('.mySlide');
+        const dotsContainer = document.querySelector('.dots-container');
+    
+        // Cria os dots
+        slides.forEach((_, i) => {
+            const dot = document.createElement('span');
+            dot.className = 'dot';
+            dot.onclick = () => slideAtual(i + 1);
+            dotsContainer.appendChild(dot);
+        });
+    
+    // Inicializa o primeiro slide e dot
+    mostrarSlide(slideIndex);
+    });
+    </script>
+</head>
+
+<body class="gradient-background">
+    <header class="header">
+        <div class="header__container">
+            <img src="img/Logo_pix4.png" class="header__logo" alt="Logo Pix4">
+                <a class="header__link" href="#Home">Home</a>
+                <a class="header__link" href="#about-me" >About Me</a>
+                <a class="header__link" href="#projects">Projects</a>
+        </div>
+
+    </header>
+    
+    <main>
+        <section id="Home" class="container">
+            <h1 class="container__titulo">Caio Pompei Campos</h1>
+            <p class="container__texto">Computer Science Student</p>
+        </section>
+        
+        <section class="container-h">
+            <div class="container__div">
+                <h2 class="container__subtitulo">Skills</h2>
+                <ul id="image-list">
+                    <li><a href="https://www.java.com/" target="_blank"><img class="logo-image" src="img/logo_java.png"></a></li>
+                    <li><a href="https://www.python.org/" target="_blank"><img class="logo-image" src="img/Logo_python.png"></a></li>
+                    <li><a href="https://html.spec.whatwg.org/" target="_blank"><img class="logo-image" src="img/logo_html.png"></a></li>
+                    <li><a href="https://css3.com/" target="_blank"><img class="logo-image" src="img/logo_css.png"></a></li>
+                    <li><a href="https://git-scm.com/" target="_blank"><img class="logo-image" src="img/logo_git.png"></a></li>
+                </ul>
+            </div>
+
+            <div class="container__div">
+                <h2 class="container__subtitulo">Connect with me</h2>
+                <ul id="image-list2">
+                    <li><a href="https://github.com/Pix4gunXd" target="_blank"><img class="logo-image" src="img/logo_github.png"></a></li>
+                    <li><a href="https://www.linkedin.com/in/caiopompei/" target="_blank"><img class="logo-image" src="img/logo_linkedin.png"></a></li>
+                    <li><a target="_blank"><img class="logo-image" src="img/logo_email.png"></a></li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section class="container">
+            
+            <div class="fundo_sobre">
+                <div id="about-me" class="container-sobre">
+                <h2 class="sobre-titulo">About Me</h2>
+                <p class="sobre-mim">
+                    Hello! My name is Caio Pompei Campos. I am a Computer Science student at the Universidade do Sul de Santa Catarina (UNISUL), currently in my 5th semester.
+I am passionate about technology and software development, with experience in languages such as Java, Python, HTML, CSS, and MySQL.
+I enjoy exploring topics like artificial intelligence, machine learning, and innovative system design.
+In July 2024, I had the opportunity to volunteer as an interpreter, connecting cultures and improving my communication skills.
+I am always seeking new challenges and opportunities to grow as a professional in the field of technology.
+                </p>
+                </div>
+
+                <img class="logo_sobre" src="img/Logo_pix4_2.png">
+            </div>
+
+        </section>
+
+
+        <section id="projects" class="container">
+            <h2 class="container__titulo">Projects</h2>
+            
+            <div class="carrossel-container">
+                <!-- Slide 1 -->
+                <div class="mySlide fade">
+                    <div class="cards-container">
+                        <a class="project-card project-image__bg" href="https://github.com/Pix4gunXd/Tool-Tracker" target="_blank"><img class="project-image" src="img/ToolTracker Logo Oficial.png"></a>
+                        <a class="project-card project-image__bg2" href="https://github.com/Pix4gunXd" target="_blank"><img class="project-image" src="img/logo_Max.png"></a>
+                        <a class="project-card project-image__bg3" href="https://github.com/Pix4gunXd" target="_blank"><img class="project-image" src="img/Try Hit Me_label2.png"></a>
+                    </div>
+                </div>
+            
+                <!-- Slide 2 -->
+                <div class="mySlide fade">
+                    <div class="cards-container">
+                        <a class="project-card" href="*" target="_blank"><img class="project-image" src="">PROJECT 04</a>
+                        <a class="project-card" href="*" target="_blank"><img class="project-image" src="">PROJECT 05</a>
+                        <a class="project-card" href="*" target="_blank"><img class="project-image" src="">PROJECT 06</a>
+                    </div>
+                </div>
+            
+                <!-- Indicadores (pontos) -->
+                <div class="dots-container"></div>
+            </div>
+        </section>>
+
+    </main>
+
+    <footer class="footer">
+        Developed by Caio Pompei Campos
+    </footer>
+
+</body>
+
+</html>

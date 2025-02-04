@@ -1,0 +1,41 @@
+@import url(style.css);
+
+.header {
+    background-color: rgba(15, 14, 13, 0.6);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1.0);
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Espaça os elementos horizontalmente */
+    padding: 0.62em 1.25em; /* Adiciona um espaçamento interno */
+}
+
+.header__container {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente dentro do container */
+    gap: 3em; /* Espaçamento entre os itens */
+}
+
+.header__logo {
+    width: 12%; /* Ajuste o tamanho da logo conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.header__link {
+    color: #ffffff;
+    text-decoration: none; 
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 400;
+    font-size: 20px; 
+    margin: 0 10px; 
+}
+
+.header__link:hover {
+    color: #c9c9c9;
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+.header__logo:hover {
+    transform: scale(1.03);
+    transition: 0.2s;
+}

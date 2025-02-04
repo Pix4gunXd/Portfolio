@@ -1,0 +1,107 @@
+@import url("header.css");
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+
+.container__titulo {
+    padding: 1.5em 0 0.2em 0;
+
+    color: #ffffff;
+    font-size: 62px;
+    font-weight: 700;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.container__texto {
+    padding: 0;
+
+    color: #ebebeb;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container-h {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container__div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8em 0;
+    gap: 1em;
+}
+
+.container__subtitulo {
+    color: #ffffff;
+    font-size: 31px;
+    font-weight: 600;
+    font-family: 'League Spartan', sans-serif;
+}
+
+ul#image-list li{
+    display: inline;
+}
+
+ul#image-list2 li{
+    display: inline;
+    margin: 0.6em;
+}
+
+.logo-image {
+    width: 4em;
+}
+
+.logo-image:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+.fundo_sobre{
+    display: flex;
+    align-items: center;
+    background-color: #848484aa;
+    height: 60%;
+    width: 70%;
+    border-radius: 40px;
+    padding: 0 1.5em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona um leve sombreado */
+}
+.container-sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5em;
+}
+
+.sobre-titulo { 
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    font-size: 3em;
+    padding: 0.1em 0 0 0;    
+}
+
+.sobre-mim {
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    font-weight: 550;
+}
+
+.logo_sobre{
+    width: 23em;
+    padding: 2em 2em 1em 5.37em ;
+}
