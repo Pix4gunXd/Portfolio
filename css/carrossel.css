@@ -106,3 +106,7 @@
     transform: scale(1.03);
     transition: 0.2s;
 }
+
+.project-icon {
+    width: 20%;
+}
